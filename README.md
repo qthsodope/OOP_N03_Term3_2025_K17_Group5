@@ -6,6 +6,12 @@
 
 Ứng dụng cho phép quản lý thông tin sản phẩm như: thêm, sửa, xoá, tìm kiếm và sắp xếp sản phẩm, tất cả đều tương tác thông qua giao diện người dùng và được lưu trữ trong MySQL.
 
+## 📌 Thành viên
+
+1. Nguyen Quoc Thien
+2. Tran Duc Minh
+3. Nghiem Xuan Khanh
+
 ## 🧱 Công nghệ sử dụng
 
 - ✅ Ngôn ngữ: **Java**

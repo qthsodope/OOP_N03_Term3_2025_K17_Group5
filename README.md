@@ -16,6 +16,6 @@
 
 - ✅ Ngôn ngữ: **Java**
 - 🛠 IDE: **IntelliJ IDEA**
-- 💻 Giao diện: **Swing** / **JavaFX**
+- 💻 Giao diện: **Swing**
 - 💾 Cơ sở dữ liệu: **MySQL**
 - 🔌 Kết nối DB: **JDBC**

@@ -8,7 +8,7 @@ public class User {
     private String role;           // Vai trò: Admin, Staff, Client
     private boolean status;        // true: đang hoạt động, false: bị khoá
 
-    User(int id, String username, String password, String email, String role, boolean status) {
+   public User(int id, String username, String password, String email, String role, boolean status) {
         this.id = id;
         this.username = username;
         this.password = password;

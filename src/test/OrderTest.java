@@ -4,7 +4,7 @@ import model.Order;
 import java.util.Date;
 
 public class OrderTest {
-    public static void main(String[] args) {
+   public void test() {
         Date now = new Date();
         Order order = new Order(2001, 1, now, "Processing", 12000000);
 

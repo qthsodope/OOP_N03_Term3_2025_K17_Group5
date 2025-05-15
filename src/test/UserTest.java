@@ -3,7 +3,7 @@ package test;
 import model.User;
 
 public class UserTest {
-    public static void main(String[] args) {
+    public void test() {
         User u = new User(1, "admin", "admin123", "admin@gmail.com", "ADMIN", true);
 
         System.out.println(u.toString());

@@ -3,7 +3,7 @@ package test;
 import model.Product;
 
 public class ProductTest {
-    public static void main(String[] args) {
+    public void test(){
         Product p = new Product(101, "Asus Laptop", "Gaming laptop", 25990000, 1, 2, 15);
 
         System.out.println(p.toString());

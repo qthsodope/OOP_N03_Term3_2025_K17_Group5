@@ -1,6 +1,6 @@
 package test;
 
-import util.Recursion;
+import utils.Recursion;
 
 public class RecursionTest {
     public void test() {

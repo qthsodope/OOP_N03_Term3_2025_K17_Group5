@@ -1,6 +1,6 @@
 package test;
 
-import util.Time;
+import utils.Time;
 
 public class TimeTest {
     public void test() {

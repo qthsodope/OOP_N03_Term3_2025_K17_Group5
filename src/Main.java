@@ -1,15 +1,16 @@
 import test.UserTest;
-import test.ProductTest;
-import test.OrderTest;
-class Main{
-    public static void main(String[] args) {
+import test.TimeTest;
+import test.RecursionTest;
 
-        //test User
-        UserTest ut = new UserTest();
-        ut.test();
-         ProductTest pt = new ProductTest();
-        pt.test();
-        OrderTest ot = new OrderTest();
-        ot.test();
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("== Test User ==");
+        new UserTest().test();
+
+        System.out.println("\n== Test Time ==");
+        new TimeTest().test();
+
+        System.out.println("\n== Test Recursion ==");
+        new RecursionTest().test();
     }
 }

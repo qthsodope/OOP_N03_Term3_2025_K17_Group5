@@ -7,7 +7,6 @@ public class Inventory {
     private int quantityIn;
     private int quantityOut;
     private int currentStock;
-    public Date due_date;
 
     public Inventory() {}
 

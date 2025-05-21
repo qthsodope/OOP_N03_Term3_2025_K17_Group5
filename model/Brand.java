@@ -29,5 +29,3 @@ public class Brand {
         return "Brand{" + "id:" + id + ", name:" + name + ", description:" + description + '}';
     }
 }
-
-//check

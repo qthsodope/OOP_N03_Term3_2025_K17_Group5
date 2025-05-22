@@ -22,57 +22,21 @@
 
 ---
 
-## ✅ Tổng hợp nội dung từ Câu 1 đến Câu 5
+## 📋 Yêu cầu:
 
-### 📌 Câu 1. Tiêu đề bài tập lớn
+### 👤 Có chức năng quản lý thông tin Người dùng:
+- Thêm, sửa, xóa Người dùng
+- Phân quyền Người dùng
 
-**Phần mềm quản lý máy tính bán lẻ**  
-Ứng dụng hỗ trợ quản lý sản phẩm, người dùng và đơn hàng cho cửa hàng máy tính. Hệ thống có phân quyền theo 3 vai trò: Admin, Staff và Client.
+### 📦 Có chức năng quản lý thông tin Sản phẩm:
+- Thêm, sửa, xóa Sản phẩm
+- Liệt kê và lọc Sản phẩm theo giá
 
----
+### 🧾 Có chức năng quản lý Đơn hàng:
+- Thêm, sửa, xóa Đơn hàng
+- Lấy Đơn hàng theo Người dùng
 
-### 📌 Câu 2. Phân tích 3 đối tượng chính
-
-- **User**: chứa thông tin người dùng như `username`, `password`, `email`, `role` (vai trò), và `status`.
-- **Product**: đại diện sản phẩm, có các thuộc tính như `name`, `description`, `price`, `categoryId`, `brandId`, `stockQuantity`.
-- **Order**: đại diện đơn hàng, gồm `userId`, `createdAt`, `status`, và `totalAmount`.
-
----
-
-### 📌 Câu 3. Cấu trúc thư mục
-src/
-- model/     (Chứa các class như Product, User, Order)
-- dao/       (Làm việc với cơ sở dữ liệu)
-- service/   (Xử lý logic nghiệp vụ)
-- utils/     (Hàm tiện ích: DB, định dạng, kiểm tra...)
-- view/      (Giao diện người dùng - Swing)
-- test/      (Chứa các class kiểm thử)
-- Main.java  (File chạy chính của chương trình)
-
----
-
-### 📌 Câu 4. Các class đã viết
-
-Đã tạo 3 class chính trong `src/model/`:
-
-- `User.java`: quản lý thông tin người dùng  
-- `Product.java`: quản lý thông tin sản phẩm  
-- `Order.java`: quản lý đơn hàng  
-
-Mỗi class đều có đầy đủ:
-- Các thuộc tính theo yêu cầu
-- Constructor khởi tạo dữ liệu
-- Getter và Setter cho mỗi thuộc tính
-- Phương thức `toString()` để in thông tin đối tượng
-
----
-
-### 📌 Câu 5. Các class kiểm thử
-
-Đã viết 3 class kiểm thử đơn giản trong thư mục `src/test/`:
-
-- `ProductTest.java`: kiểm tra tạo sản phẩm, cập nhật giá và tồn kho  
-- `UserTest.java`: kiểm tra trạng thái hoạt động và thay đổi role  
-- `OrderTest.java`: kiểm tra cập nhật trạng thái và tổng tiền đơn hàng  
-
-👉 Vì một số lý do, nên hiện tại các class kiểm thử sử dụng `main()` để chạy trực tiếp, **không sử dụng JUnit**.
+### 💾 Dữ liệu
+- Lưu trữ trong các bảng của **cơ sở dữ liệu**
+- Có các lớp đọc/ghi file cho Sản phẩm, Đơn hàng, Người dùng
+- Dữ liệu trong bộ nhớ dùng các **Collection** như `ArrayList`, `LinkedList`, `Map`, ...

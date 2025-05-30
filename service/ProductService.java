@@ -5,26 +5,21 @@ import java.util.ArrayList;
 public class ProductService {
     ArrayList<Product> products = new ArrayList<Product>();
 
-    public boolean addProduct(Product product) {
-        products.add(product);
+    public boolean checkId(int id) {
+        for(int i = 0; i < products.size(); i++) {
+            if(products.get(i).getId() == id) {
+                return false;
+            }
+        }
         return true;
     }
 
-    public ArrayList<Product> search(String keyword) {
-        for (Product product : products) {
-            if (product.getName().equals(keyword) || product.getDescription().equals(keyword)) {
-                System.out.println(product);
-            }
-            else{
-                System.out.println("Not found");
-            }
+    public boolean addProduct(Product product) {
+        if(checkId(product.getId())) {
+            products.add(product);
+            return true;
         }
-        return products;
+        return false;
     }
 
-    public void printProducts() {
-        for (Product product : products) {
-            System.out.println(product);
-        }
-    }
 }

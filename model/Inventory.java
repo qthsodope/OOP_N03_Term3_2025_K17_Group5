@@ -29,12 +29,10 @@ public class Inventory {
     public int getCurrentStock() { return currentStock; }
     public void setCurrentStock(int currentStock) { this.currentStock = currentStock; }
 
-    public Date getDue_date() { return due_date; }
-    public void setDue_date(Date due_date) { this.due_date = due_date; }
 
     @Override
     public String toString() {
         return "Inventory{" + " productId:" + productId + ", quantityIn:" + quantityIn + ", quantityOut:" + quantityOut +
-                ", currentStock:" + currentStock + ", due_date:" + due_date + '}';
+                ", currentStock:" + currentStock + ", due_date:"  + '}';
     }
 }

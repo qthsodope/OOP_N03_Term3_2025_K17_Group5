@@ -1,9 +1,7 @@
+import test.ProductServiceTest;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello from new JDK!");
+        ProductServiceTest.run();
     }
 }
-
-
-
-//trdmi

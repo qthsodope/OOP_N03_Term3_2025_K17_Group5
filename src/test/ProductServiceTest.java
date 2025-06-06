@@ -1,15 +1,14 @@
 package test;
 
 import model.Product;
-import service.ProductService;
+import service.productService;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ProductServiceTest {
     public static void run() {
         Scanner scanner = new Scanner(System.in);
-        ProductService productService = new ProductService();
+        productService productService = new productService();
 
         productService.addProduct(new Product(1, "MacBook Pro", "Laptop Apple", 3200, 1, 1, 5));
         productService.addProduct(new Product(2, "Asus ROG", "Gaming laptop", 2500, 1, 2, 3));
@@ -59,17 +58,16 @@ public class ProductServiceTest {
                 }
 
                 case 2 -> {
-                    System.out.print("Nhập từ khóa tìm kiếm: ");
-                    String keyword = scanner.nextLine();
-                    ArrayList<Product> results = productService.search(keyword);
+                    System.out.print("Nhập ID sản phẩm cần tìm: ");
+                    int searchId = scanner.nextInt();
+                    scanner.nextLine();
+                    Product result = productService.getProductById(searchId);
 
-                    if (results.isEmpty()) {
+                    if (result == null) {
                         System.out.println("Không tìm thấy sản phẩm.");
                     } else {
                         System.out.println("Kết quả tìm kiếm:");
-                        for (Product p : results) {
-                            System.out.println(p);
-                        }
+                        System.out.println(result);
                     }
 
                     System.out.println("\nDanh sách sản phẩm hiện tại:");

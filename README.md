@@ -82,8 +82,8 @@ Mở trình duyệt và truy cập: [http://localhost:8080](http://localhost:808
 ---
 
 ## 📸 Giao diện ứng dụng
-![Giao diện Quản trị viên](screenshots/admin.png)
-![Giao diện Khách hàng](screenshots/client.png)
+![Giao diện Quản trị viên](laptopstore/screenshots/admin.png)
+![Giao diện Khách hàng](laptopstore/screenshots/client.png)
 
 ---
 

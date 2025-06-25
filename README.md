@@ -1,42 +1,75 @@
-# 💻 Phần Mềm Quản Lý Máy Tính Bán Lẻ - Java OOP + MySQL + GUI
+# 💻 Laptop Store – Spring Boot Project
 
-## 📌 Giới thiệu
+Ứng dụng quản lý cửa hàng laptop với 2 vai trò:
 
-Đây là một ứng dụng quản lý máy tính bán lẻ được xây dựng bằng ngôn ngữ **Java**, áp dụng mô hình **lập trình hướng đối tượng (OOP)**, kết nối với **cơ sở dữ liệu MySQL**, và có **giao diện đồ họa người dùng (GUI)** sử dụng thư viện **Swing**.
-
-Ứng dụng cho phép người dùng quản lý thông tin sản phẩm như: thêm, sửa, xoá, tìm kiếm và sắp xếp sản phẩm. Tất cả thao tác đều thực hiện thông qua giao diện và được lưu trữ trong cơ sở dữ liệu MySQL.
-
-## 📌 Thành viên
-
-1. Nguyễn Quốc Thiên  
-2. Trần Đức Minh  
-3. Nghiêm Xuân Khánh
-
-## 🧱 Công nghệ sử dụng
-
-- ✅ Ngôn ngữ: **Java**
-- 🛠 IDE: **IntelliJ IDEA**
-- 💻 Giao diện: **Swing**
-- 💾 Cơ sở dữ liệu: **MySQL**
-- 🔌 Kết nối DB: **JDBC**
+- 👑 **Admin**: Quản lý sản phẩm, hãng, người dùng
+- 🛒 **Client**: Xem sản phẩm, tìm kiếm, giỏ hàng cá nhân
 
 ---
 
-## 📋 Yêu cầu:
+## ✨ Tính năng
 
-### 👤 Có chức năng quản lý thông tin Người dùng:
-- Thêm, sửa, xóa Người dùng
-- Phân quyền Người dùng
+### Admin
+- Đăng nhập, đăng xuất
+- Thêm / sửa / xoá laptop
+- Quản lý hãng sản xuất
+- Xem danh sách người dùng
 
-### 📦 Có chức năng quản lý thông tin Sản phẩm:
-- Thêm, sửa, xóa Sản phẩm
-- Liệt kê và lọc Sản phẩm theo giá
+### Client
+- Xem sản phẩm theo hãng
+- Tìm kiếm theo tên, CPU, RAM
+- Xem chi tiết, thêm vào giỏ hàng
+- Chỉnh sửa hoặc xoá giỏ hàng
 
-### 🧾 Có chức năng quản lý Đơn hàng:
-- Thêm, sửa, xóa Đơn hàng
-- Lấy Đơn hàng theo Người dùng
+---
 
-### 💾 Dữ liệu
-- Lưu trữ trong các bảng của **cơ sở dữ liệu**
-- Có các lớp đọc/ghi file cho Sản phẩm, Đơn hàng, Người dùng
-- Dữ liệu trong bộ nhớ dùng các **Collection** như `ArrayList`, `LinkedList`, `Map`, ...
+## 🛠️ Công nghệ sử dụng
+- **Spring Boot** – Backend & cấu hình hệ thống  
+- **Spring Security** – Xác thực & phân quyền  
+- **JPA (Hibernate)** – ORM kết nối MySQL  
+- **Thymeleaf** – View engine  
+- **Bootstrap 5** – Giao diện người dùng  
+
+---
+
+## 👥 Thành viên nhóm
+
+| Họ tên               | Vai trò                                     |
+|----------------------|----------------------------------------------|
+| **Nguyễn Quốc Thiên**   | Backend & phân quyền đăng nhập              |
+| **Trần Đức Minh**       | CRUD sản phẩm & giao diện quản trị          |
+| **Nghiêm Xuân Khánh**   | Giỏ hàng & giao diện người dùng             |
+
+---
+
+## ▶️ Hướng dẫn chạy nhanh
+
+1. **Clone project**
+
+```bash
+git clone https://github.com/qthsodope/spring-boot-laptop-management.git
+cd spring-boot-laptop-management
+```
+
+2. **Tạo database MySQL**
+
+```sql
+CREATE DATABASE laptopstore;
+```
+
+3. **Tạo file `application.properties` trong `src/main/resources`**
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/laptopstore
+spring.datasource.username=root
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+```
+
+4. **Chạy app trong IntelliJ**
+
+Tìm file `LaptopstoreApplication.java` → bấm **Run**
+
+---
+
+📍 Mở trình duyệt: [http://localhost:8080](http://localhost:8080) để sử dụng ứng dụng.

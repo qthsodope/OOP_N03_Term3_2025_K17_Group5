@@ -1,4 +1,7 @@
 package com.laptopstore.repository;
 
-public interface BrandRepository {
+import com.laptopstore.entity.Brand;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BrandRepository extends JpaRepository<Brand, Long> {
 }

@@ -40,7 +40,7 @@
     <td th:text="${l.cpu}"></td>
     <td th:text="${l.ram}"></td>
     <td th:text="${#numbers.formatInteger(l.price, 0, 'COMMA')} + ' đ'"></td>
-    <td th:text="${l.brand.name}"></td> <!-- Hiển thị tên hãng -->
+    <td th:text="${l.brand.name}"></td>
     <td>
       <form th:action="@{/cart/add/{id}(id=${l.id})}" method="post" style="display:inline;">
         <button type="submit" class="btn btn-success">Thêm vào giỏ</button>

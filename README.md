@@ -103,7 +103,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 ## 📬 Liên Hệ
 
-- GitHub Issues: [Click here](https://github.com/qthsodope/spring-boot-laptop-management/issues)  
+- GitHub Issues: [Click here](https://github.com/qthsodope/OOP_N03_Term3_2025_K17_Group5/issues)  
 - Email: [quocthien01082005@gmail.com](mailto:quocthien01082005@gmail.com)  
 - LinkedIn: [Click here](https://www.linkedin.com/in/quoc-thien-nguyen)
 

@@ -97,8 +97,7 @@ spring.jpa.hibernate.ddl-auto=update
 ## 📌 Ghi Chú
 
 - Đảm bảo MySQL đã được cài đặt và đang chạy trên máy bạn.  
-- Nếu gặp lỗi, kiểm tra lại `application.properties` và các dependency trong `pom.xml`.  
-- Có thể dùng Postman hoặc trình duyệt để test các tính năng.
+- Nếu gặp lỗi, kiểm tra lại `application.properties` và các dependency trong `pom.xml`.
 
 ---
 

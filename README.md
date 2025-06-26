@@ -1,67 +1,64 @@
-# Hệ Thống Quản Lý Cửa Hàng Laptop
+# 💻 Hệ Thống Quản Lý Cửa Hàng Laptop
 
-Ứng dụng web chuyên nghiệp, phân quyền theo vai trò, được thiết kế để quản lý cửa hàng bán lẻ laptop. Hệ thống cung cấp các tính năng riêng biệt cho **Quản trị viên** và **Khách hàng**, đảm bảo tính bảo mật, khả năng mở rộng và trải nghiệm người dùng mượt mà.
-
----
-
-## 🚀 Tính năng
-
-### Vai trò Quản trị viên
-- Đăng nhập và đăng xuất an toàn
-- Thêm, sửa, xóa thông tin sản phẩm laptop
-- Quản lý danh sách hãng sản xuất
-- Xem và quản lý danh sách người dùng
-
-### Vai trò Khách hàng
-- Duyệt sản phẩm theo hãng sản xuất
-- Tìm kiếm sản phẩm theo tên, CPU hoặc RAM
-- Xem chi tiết thông số sản phẩm
-- Thêm, chỉnh sửa hoặc xóa sản phẩm trong giỏ hàng cá nhân
+> Ứng dụng web chuyên nghiệp giúp quản lý cửa hàng bán lẻ laptop, hỗ trợ phân quyền rõ ràng giữa **Quản trị viên** và **Khách hàng**, đảm bảo bảo mật, dễ mở rộng và thân thiện với người dùng.
 
 ---
 
-## 🛠️ Công nghệ sử dụng
-- **Spring Boot**: Xây dựng backend và cấu hình hệ thống
-- **Spring Security**: Xác thực và phân quyền người dùng
-- **JPA (Hibernate)**: ORM để kết nối cơ sở dữ liệu MySQL
-- **Thymeleaf**: Công cụ tạo giao diện động
-- **Bootstrap 5**: Thiết kế giao diện người dùng responsive và hiện đại
+## 🔑 Chức Năng Chính
+
+### 👨‍💼 Quản trị viên
+- 🔐 Đăng nhập / Đăng xuất an toàn  
+- 🧾 Thêm, sửa, xóa, tìm kiếm sản phẩm laptop  
+- 🏷️ Quản lý hãng sản xuất
+
+### 🛒 Khách hàng
+- 🧭 Duyệt sản phẩm theo hãng  
+- 🔍 Tìm kiếm theo tên, CPU hoặc RAM  
+- 📄 Xem chi tiết sản phẩm  
+- 🛍️ Thêm / sửa / xóa sản phẩm trong giỏ hàng cá nhân  
 
 ---
 
-## 📋 Yêu cầu môi trường
-- **Java**: 17 trở lên
-- **Maven**: 3.8.x
-- **MySQL**: 8.0 trở lên
-- **IDE**: IntelliJ IDEA hoặc các IDE tương thích (Eclipse, VS Code)
+## ⚙️ Công Nghệ Sử Dụng
+
+| Thành phần    | Công nghệ                                      |
+|---------------|------------------------------------------------|
+| Backend       | Spring Boot, Spring Security, JPA (Hibernate)  |
+| Frontend      | Thymeleaf, Bootstrap 5                         |
+| Cơ sở dữ liệu | MySQL 8.x                                      |
+| Build Tool    | Maven 3.8+                                     |
+| Java          | Java 17 trở lên                                |
 
 ---
 
-## 👥 Thành viên nhóm
+## 📋 Môi Trường Cần Thiết
 
-| Họ và tên             | Vai trò                                    |
-|-----------------------|--------------------------------------------|
-| **Nguyễn Quốc Thiên** | Backend & triển khai phân quyền đăng nhập  |
-| **Trần Đức Minh**     | CRUD sản phẩm & phát triển giao diện quản trị |
-| **Nghiêm Xuân Khánh** | Xây dựng giỏ hàng & giao diện khách hàng   |
+- Java 17 trở lên  
+- Maven 3.8+  
+- MySQL 8+  
+- IDE khuyên dùng: IntelliJ IDEA / Eclipse / VS Code
 
 ---
 
-## ▶️ Hướng dẫn triển khai
+## 🚀 Hướng Dẫn Cài Đặt
 
-### 1. Tải mã nguồn
+### 1️⃣ Tải mã nguồn
+
 ```bash
 git clone https://github.com/qthsodope/spring-boot-laptop-management.git
 cd spring-boot-laptop-management
 ```
 
-### 2. Tạo cơ sở dữ liệu MySQL
+### 2️⃣ Tạo cơ sở dữ liệu MySQL
+
 ```sql
 CREATE DATABASE laptopstore;
 ```
 
-### 3. Cấu hình file `application.properties`
-Tạo file `application.properties` trong thư mục `src/main/resources` với nội dung:
+### 3️⃣ Cấu hình kết nối cơ sở dữ liệu
+
+Tạo file `application.properties` trong `src/main/resources`:
+
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/laptopstore
 spring.datasource.username=root
@@ -69,35 +66,48 @@ spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-### 4. Chạy ứng dụng
-- Mở IntelliJ IDEA
-- Tìm file `LaptopstoreApplication.java`
-- Nhấn **Run** để khởi động ứng dụng
+> 💡 Thay `your_password` bằng mật khẩu MySQL thực tế của bạn.
+
+### 4️⃣ Chạy ứng dụng
+
+- Mở bằng IntelliJ IDEA hoặc IDE tương thích  
+- Chạy file `LaptopstoreApplication.java`  
+- Truy cập: [http://localhost:8080](http://localhost:8080)
 
 ---
 
-## 🌐 Truy cập ứng dụng
-Mở trình duyệt và truy cập: [http://localhost:8080](http://localhost:8080)
+## 🖼️ Giao Diện Thực Tế
+
+| Quản trị viên                             | Khách hàng                               |
+|-------------------------------------------|-------------------------------------------|
+| ![Admin UI](laptopstore/screenshots/admin.png) | ![Client UI](laptopstore/screenshots/client.png) |
 
 ---
 
-## 📸 Giao diện ứng dụng
-![Giao diện Quản trị viên](laptopstore/screenshots/admin.png)
-![Giao diện Khách hàng](laptopstore/screenshots/client.png)
+## 👨‍💻 Thành Viên Nhóm
+
+| Họ và tên             | Vai trò                                |
+|------------------------|-----------------------------------------|
+| **Nguyễn Quốc Thiên** | Backend & phân quyền đăng nhập          |
+| **Trần Đức Minh**     | CRUD sản phẩm & giao diện quản trị      |
+| **Nghiêm Xuân Khánh** | Giỏ hàng & giao diện người dùng         |
 
 ---
 
-## 📝 Lưu ý
-- Đảm bảo MySQL đã được cài đặt và chạy trên máy local.
-- Thay `your_password` trong file `application.properties` bằng mật khẩu MySQL của bạn.
-- Nếu gặp lỗi, kiểm tra các dependency trong file `pom.xml` hoặc liên hệ nhóm phát triển.
+## 📌 Ghi Chú
+
+- Đảm bảo MySQL đã được cài đặt và đang chạy trên máy bạn.  
+- Nếu gặp lỗi, kiểm tra lại `application.properties` và các dependency trong `pom.xml`.  
+- Có thể dùng Postman hoặc trình duyệt để test các tính năng.
 
 ---
 
-## 📧 Liên hệ
-Nếu có thắc mắc hoặc cần hỗ trợ, vui lòng:
+## 📬 Liên Hệ
 
-- Mở issue trên [GitHub](https://github.com/qthsodope/spring-boot-laptop-management/issues)
-- Gửi email đến: [quocthien01082005@gmail.com](mailto:quocthien01082005@gmail.com)
-- Kết nối qua LinkedIn: [Click here](https://www.linkedin.com/in/quoc-thien-nguyen/)
+- GitHub Issues: [Click here](https://github.com/qthsodope/spring-boot-laptop-management/issues)  
+- Email: [quocthien01082005@gmail.com](mailto:quocthien01082005@gmail.com)  
+- LinkedIn: [Click here](https://www.linkedin.com/in/quoc-thien-nguyen)
+
 ---
+
+🎉 *Cảm ơn bạn đã sử dụng hệ thống! Nếu thấy hữu ích, hãy cho chúng tôi một ⭐ trên GitHub!*

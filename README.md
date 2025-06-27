@@ -26,7 +26,7 @@
 |---------------|------------------------------------------------|
 | Backend       | Spring Boot, Spring Security                   |
 | Frontend      | Thymeleaf, Bootstrap 5                         |
-| Cơ sở dữ liệu | MySQL 8.x                                      |
+| Database      | MySQL 8.x                                      |
 | Build Tool    | Maven 3.8+                                     |
 | Java          | Java 17 trở lên                                |
 

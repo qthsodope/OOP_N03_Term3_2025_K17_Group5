@@ -12,7 +12,7 @@ import java.util.Collections;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private UserDao userDao = new UserDao();  // Gọi DAO thủ công
+    private UserDao userDao = new UserDao();
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

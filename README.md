@@ -1,3 +1,4 @@
+
 # 💻 Hệ Thống Quản Lý Cửa Hàng Laptop
 
 > Ứng dụng web chuyên nghiệp giúp quản lý cửa hàng bán lẻ laptop, hỗ trợ phân quyền rõ ràng giữa **Quản trị viên** và **Khách hàng**, đảm bảo bảo mật, dễ mở rộng và thân thiện với người dùng.
@@ -23,7 +24,7 @@
 
 | Thành phần    | Công nghệ                                      |
 |---------------|------------------------------------------------|
-| Backend       | Spring Boot, Spring Security, JPA (Hibernate)  |
+| Backend       | Spring Boot, Spring Security                   |
 | Frontend      | Thymeleaf, Bootstrap 5                         |
 | Cơ sở dữ liệu | MySQL 8.x                                      |
 | Build Tool    | Maven 3.8+                                     |
@@ -45,25 +46,37 @@
 ### 1️⃣ Tải mã nguồn
 
 ```bash
-git clone https://github.com/qthsodope/spring-boot-laptop-management.git
-cd spring-boot-laptop-management
+https://github.com/qthsodope/OOP_N03_Term3_2025_K17_Group5.git
+cd OOP_N03_Term3_2025_K17_Group5
 ```
 
 ### 2️⃣ Tạo cơ sở dữ liệu MySQL
 
+Mở terminal MySQL và chạy lần lượt 2 file sau trong `src/main/resources/database/`:
+
 ```sql
-CREATE DATABASE laptopstore;
+source src/main/resources/database/1-schema.sql;
+source src/main/resources/database/2-data.sql;
 ```
+
+> 💡 Bạn có thể dùng MySQL Workbench hoặc terminal đều được.
 
 ### 3️⃣ Cấu hình kết nối cơ sở dữ liệu
 
-Tạo file `application.properties` trong `src/main/resources`:
+Mở 2 file sau và sửa lại tài khoản phù hợp với máy bạn:
 
+#### `src/main/resources/application.properties`
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/laptopstore
+spring.datasource.url=jdbc:mysql://localhost:3306/laptopdb
 spring.datasource.username=root
 spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
+```
+
+#### `src/main/java/com/laptopstore/util/JdbcUtil.java`
+```java
+private static final String URL = "jdbc:mysql://localhost:3306/laptopdb";
+private static final String USER = "root";
+private static final String PASSWORD = "your_password";
 ```
 
 > 💡 Thay `your_password` bằng mật khẩu MySQL thực tế của bạn.
@@ -88,16 +101,16 @@ spring.jpa.hibernate.ddl-auto=update
 
 | Họ và tên             | Vai trò                                |
 |------------------------|-----------------------------------------|
-| **Nguyễn Quốc Thiên** | Backend & phân quyền đăng nhập          |
-| **Trần Đức Minh**     | CRUD sản phẩm & giao diện quản trị      |
-| **Nghiêm Xuân Khánh** | Giỏ hàng & giao diện người dùng         |
+| **Nguyễn Quốc Thiên** | Viết DAO JDBC, bảo mật, kiến trúc backend |
+| **Trần Đức Minh**     | Giao diện admin, controller, giỏ hàng     |
+| **Nghiêm Xuân Khánh** | Tạo database, seed dữ liệu, hướng dẫn triển khai |
 
 ---
 
 ## 📌 Ghi Chú
 
 - Đảm bảo MySQL đã được cài đặt và đang chạy trên máy bạn.  
-- Nếu gặp lỗi, kiểm tra lại `application.properties` và các dependency trong `pom.xml`.
+- Nếu gặp lỗi, kiểm tra lại thông tin đăng nhập ở cả `JdbcUtil.java` và `application.properties`.
 
 ---
 

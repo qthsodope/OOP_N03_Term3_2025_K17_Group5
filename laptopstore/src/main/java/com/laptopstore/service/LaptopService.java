@@ -1,37 +1,35 @@
 package com.laptopstore.service;
 
+import com.laptopstore.dao.LaptopDao;
 import com.laptopstore.entity.Laptop;
-import com.laptopstore.repository.LaptopRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public class LaptopService {
 
-    @Autowired
-    private LaptopRepository laptopRepo;
+    private LaptopDao laptopDao = new LaptopDao();
 
     public List<Laptop> getAll() {
-        return laptopRepo.findAll();
+        return laptopDao.findAll();
     }
 
     public void save(Laptop laptop) {
-        laptopRepo.save(laptop);
+        if (laptop.getId() == null) {
+            laptopDao.insert(laptop);
+        } else {
+            laptopDao.update(laptop);
+        }
     }
 
     public Laptop getById(Long id) {
-        return laptopRepo.findById(id).orElse(null);
+        return laptopDao.findById(id);
     }
 
     public void delete(Long id) {
-        laptopRepo.deleteById(id);
+        laptopDao.delete(id);
     }
 
     public List<Laptop> search(String keyword) {
-        return laptopRepo.findByNameContainingIgnoreCaseOrCpuContainingIgnoreCaseOrRamContainingIgnoreCase(
-                keyword, keyword, keyword
-        );
+        return laptopDao.search(keyword);
     }
 }

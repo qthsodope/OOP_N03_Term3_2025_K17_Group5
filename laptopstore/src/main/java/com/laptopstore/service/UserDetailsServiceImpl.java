@@ -1,30 +1,30 @@
 package com.laptopstore.service;
 
+import com.laptopstore.dao.UserDao;
 import com.laptopstore.entity.User;
-import com.laptopstore.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.*;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.Collections;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    @Autowired
-    private UserRepository userRepo;
+    private UserDao userDao = new UserDao();  // Gọi DAO thủ công
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User u = userRepo.findByUsername(username);
+        User u = userDao.findByUsername(username);
         if (u == null) throw new UsernameNotFoundException("User not found");
+
+        GrantedAuthority authority = new SimpleGrantedAuthority(u.getRole());
 
         return new org.springframework.security.core.userdetails.User(
                 u.getUsername(),
                 u.getPassword(),
-                List.of(new SimpleGrantedAuthority(u.getRole()))
+                Collections.singletonList(authority)
         );
     }
 }

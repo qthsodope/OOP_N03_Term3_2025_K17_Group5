@@ -2,7 +2,7 @@ package com.laptopstore.controller;
 
 import com.laptopstore.entity.Brand;
 import com.laptopstore.service.BrandService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.laptopstore.service.BrandServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/admin/brands")
 public class AdminBrandController {
 
-    @Autowired
-    private BrandService brandService;
+    private final BrandService brandService = new BrandServiceImpl();
 
     @GetMapping
     public String list(Model model) {

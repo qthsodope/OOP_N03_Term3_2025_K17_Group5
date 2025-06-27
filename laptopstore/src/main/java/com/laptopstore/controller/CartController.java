@@ -2,7 +2,6 @@ package com.laptopstore.controller;
 
 import com.laptopstore.service.CartService;
 import com.laptopstore.service.LaptopService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,11 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/cart")
 public class CartController {
 
-    @Autowired
-    private CartService cartService;
-
-    @Autowired
-    private LaptopService laptopService;
+    private final CartService cartService = new CartService();
+    private final LaptopService laptopService = new LaptopService();
 
     @GetMapping
     public String showCart(Model model) {
@@ -29,7 +25,6 @@ public class CartController {
         cartService.add(laptopService.getById(id));
         return "redirect:/client/laptops";
     }
-
 
     @PostMapping("/add/{id}")
     public String addToCart(@PathVariable Long id) {

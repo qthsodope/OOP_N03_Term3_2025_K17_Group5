@@ -1,7 +1,6 @@
 package com.laptopstore.controller;
 
 import com.laptopstore.service.LaptopService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,8 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/client/laptops")
 public class ClientLaptopController {
 
-    @Autowired
-    private LaptopService laptopService;
+    private final LaptopService laptopService = new LaptopService();
 
     @GetMapping
     public String list(@RequestParam(name = "keyword", required = false) String keyword, Model model) {
@@ -20,6 +18,7 @@ public class ClientLaptopController {
             model.addAttribute("keyword", keyword);
         } else {
             model.addAttribute("list", laptopService.getAll());
+            model.addAttribute("keyword", "");
         }
         return "client_laptop_list";
     }

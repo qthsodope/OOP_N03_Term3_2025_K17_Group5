@@ -3,7 +3,7 @@ package com.laptopstore.controller;
 import com.laptopstore.entity.Laptop;
 import com.laptopstore.service.LaptopService;
 import com.laptopstore.service.BrandService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.laptopstore.service.BrandServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/admin/laptops")
 public class AdminLaptopController {
 
-    @Autowired
-    private LaptopService laptopService;
-
-    @Autowired
-    private BrandService brandService;
+    private final LaptopService laptopService = new LaptopService();
+    private final BrandService brandService = new BrandServiceImpl();
 
     @GetMapping
     public String list(@RequestParam(value = "keyword", required = false) String keyword, Model model) {

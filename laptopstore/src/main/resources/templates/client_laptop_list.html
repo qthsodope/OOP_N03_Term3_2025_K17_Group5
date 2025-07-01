@@ -2,18 +2,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Danh sách Laptop</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body class="container mt-4">
 
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h2>Giỏ hàng</h2>
+    <h2>Danh sách Laptop</h2>
     <form th:action="@{/logout}" method="post">
         <button class="btn btn-outline-danger btn-sm">🚪 Đăng xuất</button>
     </form>
 </div>
-
-<h2>Danh sách Laptop</h2>
 
 <form th:action="@{/client/laptops}" method="get" class="mb-3 d-flex">
     <input type="text" class="form-control me-2" name="keyword" placeholder="Tìm theo tên, CPU, RAM..."
